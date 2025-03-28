@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What's Your Name?"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your name"
+                android:layout_below="@id/Name"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/Branch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Your Branch"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_below="@id/editName"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerBranch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Branch"/>
+
+            <TextView
+                android:id="@+id/Year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Your Year"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_below="@id/spinnerBranch"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Year"/>
+
+            <TextView
+                android:id="@+id/Birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Your Birth Date"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_below="@id/spinnerYear"
+                android:layout_marginTop="12dp"/>
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Birthdate"/>
+
+            <TextView
+                android:id="@+id/Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Your Gender"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_below="@id/datePicker"
+                android:layout_marginTop="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Gender"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <RadioButton android:id="@+id/radioMale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Male"/>
+                <RadioButton android:id="@+id/radioFemale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Female"/>
+                <RadioButton android:id="@+id/radioOther" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Other"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textSocialize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Want to Socialize With?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_below="@id/radioGroupGender"
+                android:layout_marginTop="12dp"/>
+
+            <CheckBox
+                android:id="@+id/checkMen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Men"
+                android:layout_below="@id/textSocialize"
+                android:layout_marginTop="8dp"/>
+
+            <CheckBox
+                android:id="@+id/checkWomen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Women"
+                android:layout_below="@id/checkMen"/>
+
+            <CheckBox
+                android:id="@+id/checkOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:layout_below="@id/checkWomen"/>
+
+            <TextView
+                android:id="@+id/LookingFor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Looking for?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_below="@id/checkOthers"
+                android:layout_marginTop="12dp"/>
+
+            <CheckBox
+                android:id="@+id/checkCasual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Casual Dating"
+                android:layout_below="@id/LookingFor"/>
+
+            <CheckBox
+                android:id="@+id/checkLongTerm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Long-term Relationship"
+                android:layout_below="@id/checkCasual"/>
+
+            <CheckBox
+                android:id="@+id/checkFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Just Friends"
+                android:layout_below="@id/checkLongTerm"/>
+
+            <CheckBox
+                android:id="@+id/checkNetworking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Professional Networking"
+                android:layout_below="@id/checkFriends"/>
+
+            <CheckBox
+                android:id="@+id/checkStudyBuddy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Study Buddy"
+                android:layout_below="@id/checkNetworking"/>
+
+            <CheckBox
+                android:id="@+id/checkActivityPartner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity Partner"
+                android:layout_below="@id/checkStudyBuddy"/>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_below="@id/checkActivityPartner"
+                android:layout_marginTop="16dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
