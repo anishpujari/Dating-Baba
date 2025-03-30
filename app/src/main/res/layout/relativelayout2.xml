@@ -1,0 +1,134 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/FunFact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fun Fact About You"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"/>
+
+        <EditText
+            android:id="@+id/editFunFact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FunFact"
+            android:layout_marginTop="8dp"
+            android:hint="Type here..."
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/GoToSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What's Your Go-To Song?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/editFunFact"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/editGoToSong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GoToSong"
+            android:layout_marginTop="8dp"
+            android:hint="Type your favorite song..."
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/Personality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you an Introvert or Extrovert?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/editGoToSong"
+            android:layout_marginTop="12dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupPersonality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Personality"
+            android:layout_marginTop="8dp">
+            <RadioButton android:id="@+id/radioIntrovert" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Introvert"/>
+            <RadioButton android:id="@+id/radioExtrovert" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Extrovert"/>
+            <RadioButton android:id="@+id/radioAmbivert" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ambivert"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/WeekendPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Ideal Weekend Plan?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/radioGroupPersonality"
+            android:layout_marginTop="12dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupWeekend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/WeekendPlan"
+            android:layout_marginTop="8dp">
+            <RadioButton android:id="@+id/radioAdventureTrip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏕️ Adventure Trip"/>
+            <RadioButton android:id="@+id/radioMovieMarathon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🍿 Movie Marathon"/>
+            <RadioButton android:id="@+id/radioGaming" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎮 Gaming and Chill"/>
+            <RadioButton android:id="@+id/radioParty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎤 Party and Socializing"/>
+            <RadioButton android:id="@+id/radioGym" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏋️ Gym and Self-care"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textSports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What Sports Do You Watch?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/radioGroupWeekend"
+            android:layout_marginTop="12dp"/>
+
+        <CheckBox android:id="@+id/Football" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚽ Football" android:layout_below="@id/textSports"/>
+        <CheckBox android:id="@+id/Basketball" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏀 Basketball" android:layout_below="@id/Football"/>
+        <CheckBox android:id="@+id/Tennis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎾 Tennis" android:layout_below="@id/Basketball"/>
+        <CheckBox android:id="@+id/Cricket" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏏 Cricket" android:layout_below="@id/Tennis"/>
+        <CheckBox android:id="@+id/F1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏎️ Formula 1" android:layout_below="@id/Cricket"/>
+        <CheckBox android:id="@+id/NoSports" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏌️ I don't watch sports" android:layout_below="@id/F1"/>
+
+        <TextView
+            android:id="@+id/textFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What Kind of Food Do You Like?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/NoSports"
+            android:layout_marginTop="12dp"/>
+
+        <CheckBox android:id="@+id/FastFood" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🍕 Fast Food" android:layout_below="@id/textFood"/>
+        <CheckBox android:id="@+id/Healthy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🥗 Healthy" android:layout_below="@id/FastFood"/>
+        <CheckBox android:id="@+id/Exotic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🍣 Exotic (Sushi, Mexican, Indian)" android:layout_below="@id/Healthy"/>
+        <CheckBox android:id="@+id/SweetTooth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🍰 Sweet Tooth" android:layout_below="@id/Exotic"/>
+        <CheckBox android:id="@+id/HomeCooked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🍗 Home-Cooked and Comfort Food" android:layout_below="@id/SweetTooth"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_below="@id/HomeCooked"
+            android:layout_marginTop="16dp"/>
+    </RelativeLayout>
+</ScrollView>
