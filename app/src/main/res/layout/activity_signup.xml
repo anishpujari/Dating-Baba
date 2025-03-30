@@ -4,34 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFB6C1"
-    tools:context=".MainActivity">
+    tools:context=".SignUpActivity">
 
-    <!-- App Title -->
     <TextView
-        android:id="@+id/social"
+        android:id="@+id/textViewSignUpTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Socializing App"
+        android:text="Sign Up"
         android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"/>
 
-    <!-- Email Input -->
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email (Only rknec)"
+        android:hint="Email (Only RKNEC)"
         android:textSize="20sp"
         android:inputType="textEmailAddress"
         android:background="@android:color/white"
         android:padding="12dp"
-        android:layout_below="@id/social"
+        android:layout_below="@id/textViewSignUpTitle"
         android:layout_margin="16dp"/>
 
-    <!-- Password Input -->
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
@@ -44,28 +41,38 @@
         android:layout_below="@id/editTextEmail"
         android:layout_margin="16dp"/>
 
-    <!-- Login Button -->
-    <Button
-        android:id="@+id/buttonLogin"
+    <EditText
+        android:id="@+id/editTextConfirmPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:hint="Confirm Password"
         android:textSize="20sp"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:textColor="@android:color/white"
+        android:inputType="textPassword"
+        android:background="@android:color/white"
+        android:padding="12dp"
         android:layout_below="@id/editTextPassword"
         android:layout_margin="16dp"/>
 
-    <!-- Sign-Up Text -->
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="20sp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/editTextConfirmPassword"
+        android:layout_margin="16dp"/>
+
     <TextView
-        android:id="@+id/textViewSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Sign Up"
-        android:textSize="16sp"
-        android:textColor="@android:color/holo_blue_light"
-        android:layout_below="@id/buttonLogin"
-        android:layout_margin="16dp"
-        android:layout_centerHorizontal="true"/>
+        android:text="Already have an account? Login Here"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/buttonSignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/loginhere"/>
 
 </RelativeLayout>

@@ -47,34 +47,13 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/Personality"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Are you an Introvert or Extrovert?"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_below="@id/editGoToSong"
-            android:layout_marginTop="12dp"/>
-
-        <RadioGroup
-            android:id="@+id/radioGroupPersonality"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Personality"
-            android:layout_marginTop="8dp">
-            <RadioButton android:id="@+id/radioIntrovert" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Introvert"/>
-            <RadioButton android:id="@+id/radioExtrovert" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Extrovert"/>
-            <RadioButton android:id="@+id/radioAmbivert" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ambivert"/>
-        </RadioGroup>
-
-        <TextView
             android:id="@+id/WeekendPlan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Your Ideal Weekend Plan?"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_below="@id/radioGroupPersonality"
+            android:layout_below="@id/editGoToSong"
             android:layout_marginTop="12dp"/>
 
         <RadioGroup

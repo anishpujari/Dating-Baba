@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "493931401684",
+    "project_id": "datingbaba-c224a",
+    "storage_bucket": "datingbaba-c224a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493931401684:android:3e1f8e183e990dc54f8641",
+        "android_client_info": {
+          "package_name": "com.example.datingbaba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzrOkGwvF8EAOoTn7GJli252bajORdjKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
