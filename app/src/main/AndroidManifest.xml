@@ -24,6 +24,12 @@
         <activity
             android:name=".SignUpActivity">
         </activity>
+        <activity
+            android:name=".OnboardingActivity1">
+        </activity>
+        <activity
+            android:name=".OnboardingActivity2">
+        </activity>
     </application>
 
 </manifest>
