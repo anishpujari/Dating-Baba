@@ -46,11 +46,6 @@ public class OnboardingActivity1 extends AppCompatActivity {
         checkActivityPartner = findViewById(R.id.checkActivityPartner);
         btnNext = findViewById(R.id.btn_next);
 
-        btnNext.setOnClickListener(v -> goToPartTwo());
-    }
-
-    private void goToPartTwo() {
-
         String yearOptions[] = {"First Year", "Second Year", "Third Year", "Fourth Year"};
         String branchOptions[] = {"CSE", "IT", "ECE", "EEE", "MECH", "CIVIL", "ENCS", "AIML", "DS", "Cyber"};
 
@@ -61,6 +56,13 @@ public class OnboardingActivity1 extends AppCompatActivity {
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, branchOptions);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerBranch.setAdapter(adapter2);
+
+        btnNext.setOnClickListener(v -> goToPartTwo());
+    }
+
+    private void goToPartTwo() {
+
+
 
         String name = editName.getText().toString().trim();
         String branch = spinnerBranch.getSelectedItem().toString();
@@ -76,8 +78,8 @@ public class OnboardingActivity1 extends AppCompatActivity {
         String gender = selectedGenderButton.getText().toString();
 
         StringBuilder socializeWithBuilder = new StringBuilder();
-        if (checkMen.isChecked()) socializeWithBuilder.append("Men,");
-        if (checkWomen.isChecked()) socializeWithBuilder.append("Women,");
+        if (checkMen.isChecked()) socializeWithBuilder.append("Male,");
+        if (checkWomen.isChecked()) socializeWithBuilder.append("Female,");
         if (checkOthers.isChecked()) socializeWithBuilder.append("Others,");
         String socializeWith = (socializeWithBuilder.length() > 0)
                 ? socializeWithBuilder.substring(0, socializeWithBuilder.length() - 1)

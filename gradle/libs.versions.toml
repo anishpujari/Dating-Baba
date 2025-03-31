@@ -16,6 +16,9 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+picasso = "com.squareup.picasso:picasso:2.8"
+circleimageview = "de.hdodenhof:circleimageview:3.1.0"
+sdp-android = { module = "com.intuit.sdp:sdp-android", version = "1.1.1"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
