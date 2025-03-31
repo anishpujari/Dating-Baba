@@ -1,0 +1,233 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FAFAFA"
+    android:backgroundTint="@color/teal_200"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Name -->
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="4dp"
+            android:text="Name: John Doe"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.475"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Year & Branch -->
+        <TextView
+            android:id="@+id/yearBranchTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year: 2nd | Branch: CSE"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/nameTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Previous (Left) Arrow -->
+        <ImageView
+            android:id="@+id/prevButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/arrow_backward"
+            android:scaleType="fitCenter"
+            android:contentDescription="Previous Image"
+            app:layout_constraintEnd_toStartOf="@id/myImageView"
+            app:layout_constraintTop_toTopOf="@id/myImageView"
+            app:layout_constraintBottom_toBottomOf="@id/myImageView"/>
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/myImageView"
+            android:layout_width="250dp"
+            android:layout_height="320dp"
+            android:src="@drawable/profile_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/yearBranchTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Next (Right) Arrow -->
+        <ImageView
+            android:id="@+id/nextButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/arrow_forward"
+            android:scaleType="fitCenter"
+            android:contentDescription="Next Image"
+            app:layout_constraintStart_toEndOf="@id/myImageView"
+            app:layout_constraintTop_toTopOf="@id/myImageView"
+            app:layout_constraintBottom_toBottomOf="@id/myImageView"/>
+
+        <!-- Gender -->
+        <TextView
+            android:id="@+id/genderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender_text"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/myImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:paddingTop="4dp"/>
+
+        <!-- Instagram ID -->
+        <TextView
+            android:id="@+id/instagramTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instagram: @johndoe"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_blue_dark"
+            app:layout_constraintTop_toBottomOf="@id/genderTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="4dp"/>
+
+        <!-- Looking For -->
+        <TextView
+            android:id="@+id/lookingForView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/looking_for"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/instagramTextView"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:background="@drawable/pink_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lookingForTextView"/>
+
+        <TextView
+            android:id="@+id/lookingForTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/looking_for_text"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/instagramTextView"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:background="@drawable/pink_background"
+            app:layout_constraintStart_toEndOf="@id/lookingForView"/>
+
+        <!-- Interests -->
+        <TextView
+            android:id="@+id/interestsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bio:"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/lookingForTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="20dp"
+            android:padding="6dp"
+            android:background="@drawable/blue_background"
+            app:layout_constraintEnd_toStartOf="@id/interestsTextView"/>
+        <TextView
+            android:id="@+id/interestsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="abcde"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/lookingForTextView"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="20dp"
+            android:padding="6dp"
+            android:background="@drawable/blue_background"
+            app:layout_constraintStart_toEndOf="@id/interestsView"/>
+
+        <!-- Hobbies -->
+        <TextView
+            android:id="@+id/hobbiesView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hobbies"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/interestsTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:background="@drawable/pink_background"
+            app:layout_constraintEnd_toStartOf="@id/hobbiesTextView"/>
+        <TextView
+            android:id="@+id/hobbiesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hobbies_text"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/interestsTextView"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:background="@drawable/pink_background"
+            app:layout_constraintStart_toEndOf="@id/hobbiesView"/>
+
+
+        <!-- Pass Button -->
+        <Button
+            android:id="@+id/passButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Pass"
+            android:textSize="20sp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/hobbiesView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/likeButton"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Like Button -->
+        <Button
+            android:id="@+id/likeButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Chat"
+            android:textSize="20sp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/hobbiesView"
+            app:layout_constraintStart_toEndOf="@id/passButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.45"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

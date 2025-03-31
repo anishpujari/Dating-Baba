@@ -20,7 +20,7 @@ import com.google.firebase.storage.StorageReference;
 public class OnboardingActivity2 extends AppCompatActivity {
 
     private static final int PICK_IMAGE_REQUEST = 1;
-    private EditText editHobbies, editInstagram;
+    private EditText editHobbies, editInstagram, editBio;
     private ImageView imageProfile;
     private Button btnUploadPhoto, btnFinish;
     private Uri imageUri;
@@ -45,6 +45,7 @@ public class OnboardingActivity2 extends AppCompatActivity {
 
         editHobbies = findViewById(R.id.edit_hobbies);
         editInstagram = findViewById(R.id.edit_instagram);
+        editBio = findViewById(R.id.edit_bio);
         imageProfile = findViewById(R.id.image_profile);
         btnUploadPhoto = findViewById(R.id.btn_upload_photo);
         btnFinish = findViewById(R.id.btn_finish);
@@ -98,17 +99,11 @@ public class OnboardingActivity2 extends AppCompatActivity {
         // Get hobbies and Instagram details
         String hobbies = editHobbies.getText().toString().trim();
         String instagram = editInstagram.getText().toString().trim();
+        String bio = editBio.getText().toString().trim();
 
-        // Create and populate the UserProfile object (ensure you have created UserProfile.java in your package)
         UserProfile userProfile = new UserProfile();
         userProfile.setFullName(name);
         userProfile.setGender(gender);
-        // For simplicity, we store branch, year, birthDate, socialize preferences, and relationship preferences in one field.
-        // In a production app, you might want separate fields.
-//        String combinedInfo = "Branch: " + branch + ", Year: " + year + ", BirthDate: " + birthDate +
-//                ", SocializeWith: " + socializeWith + ", LookingFor: " + lookingFor +
-//                ", Hobbies: " + hobbies + ", Instagram: " + instagram;
-//        userProfile.setInterests(combinedInfo);
         userProfile.setProfilePicUrl(profilePicUrl);
         userProfile.setDob(birthDate);
         userProfile.setSocializeWith(socializeWith);
@@ -117,6 +112,7 @@ public class OnboardingActivity2 extends AppCompatActivity {
         userProfile.setYear(year);
         userProfile.setHobbies(hobbies);
         userProfile.setInsta(instagram);
+        userProfile.setBio(bio);
 
         // Save the user profile to Firestore under "users/{userId}"
         String userId = mAuth.getCurrentUser().getUid();

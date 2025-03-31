@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Dating Baba</string>
+    <string name="gender_text"><b>Gender:</b> Male</string>
+
+    <string name="looking_for"><b>Looking For:</b> </string>
+    <string name="looking_for_text">A Long Distance Relationship</string>
+
+    <string name="interests"><b>Interests:</b> </string>
+    <string name="interests_text">Fictional Books</string>
+
+    <string name="hobbies"><b>Hobbies:</b> </string>
+    <string name="hobbies_text">Chess, Music</string>
+
+    <string name="fun_fact"><b>Fun Fact:</b></string>
+    <string name="fun_fact_text">I can solve a Rubiks cube in under a minute!</string>
+
+    <string name="go_to_song"><b>Go-To Song:</b> </string>
+    <string name="go_to_song_text">Blinding Lights - The Weeknd</string>
+
+
+    <string name="ideal_weekend_plan"><b>Ideal Weekend:</b></string>
+    <string name="ideal_weekend_plan_text">A long road trip with friends!</string>
+
+
+    <string name="sports"><b>Sports I Watch:</b> </string>
+    <string name="sports_text">Football, Cricket</string>
+
+    <string name="favorite_food"><b>Favorite Food:</b></string>
+    <string name="favorite_food_text">Pizza, Sushi</string>
 </resources>
