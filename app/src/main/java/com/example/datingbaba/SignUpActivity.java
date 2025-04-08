@@ -49,13 +49,13 @@ public class SignUpActivity extends AppCompatActivity {
             Toast.makeText(this, "Fields cannot be empty!", Toast.LENGTH_SHORT).show();
             return;
         }
-        // Validate RKNEC email
+
         if (!email.endsWith("@rknec.edu")) {
             emailRegister.setError("Only RKNEC emails allowed!");
             return;
         }
 
-        // Validate Password Match
+
         if (!password.equals(confpassword)) {
             confPassword.setError("Passwords do not match!");
             return;

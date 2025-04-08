@@ -215,7 +215,7 @@
             android:id="@+id/likeButton"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:text="Like"
+            android:text="Chat"
             android:textSize="20sp"
             android:backgroundTint="@android:color/holo_red_light"
             android:textColor="@android:color/white"

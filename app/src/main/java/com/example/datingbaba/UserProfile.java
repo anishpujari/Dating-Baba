@@ -6,10 +6,10 @@ public class UserProfile {
     private String userId, fullName, gender, socializeWith, lookingFor, dob, interests, bio, branch, profilePicUrl, year, hobbies, insta;
     private long lastOnline;
     private int likesCount, matchesCount;
-    private List<String> likedUsers, matchedUsers; // Store User IDs of liked/matched users
+    private List<String> likedUsers, matchedUsers;
 
     public UserProfile() {
-        // Required empty constructor for Firebase
+
     }
 
     public UserProfile(String userId, String fullName, String gender, String socializeWith, String lookingFor, String dob,
@@ -35,7 +35,6 @@ public class UserProfile {
         this.matchedUsers = matchedUsers;
     }
 
-    // Getters and Setters
     public String getUserId() { return userId; }
     public void setUserId(String userId) { this.userId = userId; }
 

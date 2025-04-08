@@ -62,8 +62,6 @@ public class OnboardingActivity1 extends AppCompatActivity {
 
     private void goToPartTwo() {
 
-
-
         String name = editName.getText().toString().trim();
         String branch = spinnerBranch.getSelectedItem().toString();
         String year = spinnerYear.getSelectedItem().toString();
